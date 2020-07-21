@@ -1,4 +1,21 @@
-.todosContainer {
+html,
+body {
+	height: 100%;
+	margin: 0 auto;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+}
+
+header {
+	margin-bottom: 10vh;
+}
+
+.todoListsContainer {
+	margin: 0 auto;
+	width: 50%;
+}
+
+.todoListsGrid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 1fr;
@@ -16,6 +33,11 @@
 }
 .specificTodos {
 	grid-area: specificTodos;
+}
+
+.todosUl {
+	list-style-type: none;
+	padding: 0;
 }
 
 .completed {
