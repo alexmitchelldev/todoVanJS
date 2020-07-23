@@ -3,16 +3,47 @@ body {
 	height: 100%;
 	margin: 0 auto;
 	font-family: 'Montserrat', sans-serif;
-	text-align: center;
 }
 
 header {
-	margin-bottom: 10vh;
+	margin-bottom: 5vh;
+}
+
+.center-text {
+	text-align: center;
 }
 
 .todoListsContainer {
 	margin: 0 auto;
 	width: 50%;
+}
+
+#todoTabs {
+	overflow: hidden;
+	width: 800px;
+	margin: 0 auto;
+	border: 2px solid #575452;
+	border-radius: 5px;
+	background: #ffd09b;
+}
+
+/* Style the buttons inside the tab */
+#todoTabs button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 17px;
+}
+
+#container {
+	width: 800px;
+	margin: 0 auto;
+	background: #ffd09b;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .todoListsGrid {
@@ -43,4 +74,25 @@ header {
 .completed {
 	color: gray;
 	text-decoration: line-through;
+}
+
+li:nth-child(2n) {
+	background: #f7f7f7;
+}
+
+span {
+	background: #e74c3c;
+	height: 20px;
+	margin-right: 20px;
+	text-align: center;
+	color: white;
+	width: 0;
+	display: inline-block;
+	transition: 0.3s linear;
+	opacity: 0;
+}
+
+li:hover span {
+	width: 40px;
+	opacity: 1.0;
 }

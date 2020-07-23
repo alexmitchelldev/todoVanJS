@@ -5,43 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo list application vanilla JavaScript</title>
     <link rel="stylesheet" href="assets/css/main.css">
-    <script type="text/javascript" src="assets/js/todos.js"></script>
-       <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header>
+    <header class="center-text">
         <h1>Alexmitchelldev's to-do list application</h1>
     </header>
+    <!-- Section to add tabs -->
+    <!-- <div id="todoTabs">
+        <button class="tablinks" onclick="openCity(event, 'London')">Daily</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Weekly</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Specific</button>
+    </div> -->
     <section id="todoAppSection">
         <div class="todoListsContainer">
-            <div class="todoListsGrid">
+            <div class="todoListsGrid center-text">
                 <div class="dailyTodos">
                     <h2>Daily todos</h2>
-                    <ul class="todosUl">
-                        <li>Daily todo 1</li>
+                    <ul class="todosUl" id="dailyList">
                     </ul>
                 </div>
                 <div class="weeklyTodos">
                     <h2>Weekly todos</h2>
-                    <ul class="todosUl">
-                        <li>Weekly todo 1</li>
+                    <ul class="todosUl" id="weeklyList">
                     </ul>
                 </div>
                 <div class="specificTodos">
                     <h2>Specific todos</h2>
-                    <ul class="todosUl">
-                        <li>Specific todo 1</li>
+                    <ul class="todosUl" id="specificList">
                     </ul>
                 </div>
             </div>
+            <div style="text-align: center">
+                <input type="text" id="newTodoText" placeholder="Enter new todo here">
+                <input type="radio" id="daily" name="todoType" value="dailyList">
+                <label for="daily">Daily</label>
+                <input type="radio" id="weekly" name="todoType" value="weeklyList">
+                <label for="daily">Weekly</label>
+                <input type="radio" id="specific" name="todoType" value="specificList">
+                <label for="daily">Specific</label>
+                <button onclick="addTodo()">Add new Todo</button>
+            </div>
         </div>
+        <script type="text/javascript" src="assets/js/todos.js"></script>
     </section>
-    <!-- <h1>This is my todo list application in Vanilla JavaScript</h1>
-    <ul id="todoUl">
-        <li>Todo 1</li>
-        <li>Todo 2</li>
-    </ul>
-    <input type="text" id="newTodoText" placeholder="Enter new todo here...">
-    <button onclick="addTodo()">Add new Todo</button> -->
 </body>
 </html>
